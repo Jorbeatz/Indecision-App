@@ -1,30 +1,35 @@
-var appRoot = document.getElementById('app');
+class Visible extends React.Component {
 
-let text = "Lorem Ipsum Text";
-let bool = false;
-
-const onShowText = () => {
-	if(bool === false) {
-		bool = true;
-		render();	
-	} else {
-		bool = false;
-		render();
+	constructor(props) {
+		super(props);
+		this.onToggle = this.onToggle.bind(this);
+		this.state = {
+			visibility: false
+		}
 	}
-	
+
+	onToggle() {
+		this.setState((prevState) => {
+			return {
+				visibility: !prevState.visibility
+			};
+		});
+	}
+
+	render() {
+		return (
+			<div>
+				<h1>Visibility Toggle</h1>	
+				<button onClick={this.onToggle}>{this.state.visibility ? "Hide Details" : "Show Details"}</button>
+				{this.state.visibility && (
+					<div>
+						<p>Lorem Ipsum Text </p>
+					</div>
+				)}
+			</div>
+			
+		);
+	};
 }
 
-const render = () => {
-
-	const template = (
-		<div>
-			<h1>Visibility Toggle</h1>
-			<button onClick={onShowText}>Show Details</button>
-			{bool === true ? <p>{text}</p> : ""}
-		</div>
-	);
-
-	ReactDOM.render(template, appRoot);
-};
-
-render();
+ReactDOM.render(<Visible />, document.getElementById('app'));
