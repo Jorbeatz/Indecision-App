@@ -4,13 +4,15 @@ import Modal from 'react-modal';
 const OptionModal = (props) => (
 	<Modal
 		isOpen={!!props.isSelected}
-		contentLabel="Test"
+		contentLabel="Selected Option"
+		closeTimeoutMS={200}
 		ariaHideApp={false}
 		onRequestClose={props.close}
+		className="modal"
 	>
-		<h3>Test</h3>
-		{props.isSelected && <p>{props.isSelected}</p>}
-		<button onClick={props.close}>Okay</button>
+		<h3 className="modal__title">Selected Option</h3>
+		{props.isSelected && <p className="modal__body">{props.isSelected}</p>}
+		<button className="button" onClick={props.close}>Okay</button>
 	</Modal>
 );
 
