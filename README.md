@@ -1,15 +1,28 @@
-# Indecision App
+# [Indecision App](https://github.com/Jorbeatz/Indecision-App)
 
-### Desktop
+My First mess-around with React [React](https://reactjs.org/)
 
-![Image of App](http://jordyguntur.com/img/indecision-2.png)
+> Create a bunch of choices and have the site pick what you should do
 
-### Desktop (Selected Option)
+[See a demo here]()
 
-![Image of App](http://jordyguntur.com/img/indecision-3.png)
+## Stack
 
-### Mobile
+- React (Create-React-App)
 
-![Image of App](http://jordyguntur.com/img/indecision-4.png)
+## Getting Started
 
-*	Based off of Udemy Course - Complete React Web Developer Course by Andrew Mead
+### 🚀 Quick Start
+
+```bash
+$ git clone https://github.com/Jorbeatz/Indecision-App
+$ npm install
+$ npm run server
+```
+
+## NPM Commands
+
+| Command        | Description                                           |
+| -------------- | ----------------------------------------------------- |
+| npm run server | Start webpack development server @ **localhost:3000** |
+| npm run build  | Build production bundles to **./build** directory     |
