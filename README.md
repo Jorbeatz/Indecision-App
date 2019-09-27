@@ -1,6 +1,6 @@
 # [Indecision App](https://github.com/Jorbeatz/Indecision-App)
 
-Mess-around with [React](https://reactjs.org/)
+First dabble with [React](https://reactjs.org/)
 
 > Create a bunch of choices and have the site pick what you should do
 
