@@ -8,7 +8,6 @@ First dabble with [React](https://reactjs.org/)
 
 
 
-[See a demo here](https://jorbeatz-indecision-app.netlify.com/)
 
 ## Stack
 
