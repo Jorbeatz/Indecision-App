@@ -6,9 +6,10 @@
   "author": "Jordy Guntur",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --watch",
-    "server": "live-server public/",
-    "dev-server": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack --config=webpack.config.js",
+    "build:prod": "webpack --config=webpack.production.config.js -p",
+    "build:watch": "npm run build -- --watch"
   },
   "dependencies": {
     "babel-core": "^6.26.0",

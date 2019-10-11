@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/app.js",
@@ -9,18 +10,22 @@ module.exports = {
   module: {
     rules: [
       {
-        loader: "babel-loader",
         test: /\.js$/,
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        loader: "babel-loader"
       },
       {
         test: /\.s?css$/,
+        exclude: /node_modules/,
         use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
   },
-  devtool: "cheap-module-eval-source-map",
-  devServer: {
-    contentBase: path.join(__dirname, "public")
-  }
+
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: false,
+      mangle: false
+    })
+  ]
 };
