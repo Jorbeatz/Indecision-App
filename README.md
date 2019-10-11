@@ -2,7 +2,7 @@
 
 First dabble with [React](https://reactjs.org/)
 
-> Create a bunch of choices and have the site pick what you should do
+> Create a bunch of choices and have the app pick what you should do
 
 ![demo](https://i.imgur.com/oQ9Qw4g.png)
 
